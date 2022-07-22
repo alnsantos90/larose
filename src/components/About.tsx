@@ -2,11 +2,11 @@ export function About() {
   return (
     <div id="about" className="w-full flex flex-col items-center mt-12 gap-3">
       <strong className="block text-2xl font-light ">Sobre</strong>
-      <span className="block text-3xl px-6 text-center text-secondary">
+      <span className="block text-lg md:text-3xl px-6 text-center text-secondary">
         Extraordinária experiência em cuidados
       </span>
 
-      <div className="max-w-[1100px] font-light text-xl py-5 px-10 leading-relaxed text-justify text-secondary">
+      <div className="max-w-[1100px] font-light text-lg md:text-xl py-5 px-10 leading-relaxed text-justify text-secondary">
         <p>
           Procedimentos estéticos e de beleza corporal e facial, realizados por
           profissionais (esteticistas, fisioterapeutas), com alta qualidade e

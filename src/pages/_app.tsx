@@ -41,10 +41,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <div
-        className="fixed right-10 bottom-[5.5rem] rounded-full p-3 bg-green-500 shadow-xl z-50 cursor-pointer animate-wiggle transition-colors duration-700 hover:animate-none hover:scale-[1.2] "
+        className="fixed right-2 bottom-2 md:right-10 md:bottom-[5.5rem] rounded-full p-2 md:p-3 bg-green-500 shadow-xl z-50 cursor-pointer animate-wiggle transition-colors duration-700 hover:animate-none hover:scale-[1.2] 
+
+        "
         onClick={handleWhatsApp}
       >
-        <WhatsappLogo className="text-white" size={40} />
+        <WhatsappLogo className="text-white text-4xl" />
       </div>
       <Component {...pageProps} />
       <Footer />

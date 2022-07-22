@@ -27,7 +27,7 @@ export function Info() {
             <p className="text-primary md:text-xl ">belezalarose@gmail.com</p>
           </div>
 
-          <div className="flex gap-4 my-4 items-center">
+          <div className="flex gap-4 my-4 flex-wrap md:flex-nowrap items-center">
             <p className="text-primary md:text-xl ">19 3307-0107</p>
             <span className="text-primary hidden md:block">|</span>
             <p className="text-primary md:text-xl ">19 98897-0107</p>
