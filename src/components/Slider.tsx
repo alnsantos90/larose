@@ -40,3 +40,4 @@ export function Slider({ images }: SlideProps) {
     </Swiper>
   )
 }
+

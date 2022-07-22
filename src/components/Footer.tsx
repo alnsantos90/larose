@@ -8,7 +8,10 @@ export function Footer() {
     router.push(`${url}`)
   }
   return (
-    <footer className="w-full py-6 px-8 bg-primary flex justify-between">
+    <footer
+      id="testando"
+      className="w-full py-6 px-8 bg-primary flex justify-between"
+    >
       <div className="flex-1 flex justify-center items-center">
         <p className="text-secondary text-sm">
           © 2019 La Rose - Estética, Beleza e Arte

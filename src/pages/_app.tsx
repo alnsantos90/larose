@@ -3,11 +3,26 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { WhatsappLogo } from 'phosphor-react'
+import { useEffect, useState } from 'react'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 
 import '../styles/globals.css'
 function MyApp({ Component, pageProps }: AppProps) {
+  const [scrollTop, setScrollTop] = useState(false)
+  const [position, setPosition] = useState(0)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setPosition(window.scrollY)
+      if (window.scrollY > 180) {
+        setScrollTop(true)
+      } else {
+        setScrollTop(false)
+      }
+    })
+  }, [scrollTop])
+
   const router = useRouter()
 
   function handleWhatsApp() {
@@ -40,14 +55,26 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Header />
-      <div
-        className="fixed right-2 bottom-2 md:right-10 md:bottom-[5.5rem] rounded-full p-2 md:p-3 bg-green-500 shadow-xl z-50 cursor-pointer animate-wiggle transition-colors duration-700 hover:animate-none hover:scale-[1.2] 
 
-        "
-        onClick={handleWhatsApp}
-      >
-        <WhatsappLogo className="text-white text-4xl" />
-      </div>
+      {scrollTop && (
+        <div
+          className={`fixed ${
+            scrollTop && position < 900
+              ? 'bottom-2'
+              : position >= 920
+              ? 'bottom-[100px]'
+              : 'bottom-2'
+          } right-2 md:right-10 md:bottom-[5.5rem] 
+          rounded-full p-2 md:p-3 bg-green-500 shadow-xl z-50 cursor-pointer 
+          animate-wiggle transition-colors duration-700 hover:animate-none hover:scale-[1.2] 
+
+        `}
+          onClick={handleWhatsApp}
+        >
+          <WhatsappLogo className="text-white text-4xl" />
+        </div>
+      )}
+
       <Component {...pageProps} />
       <Footer />
     </>
