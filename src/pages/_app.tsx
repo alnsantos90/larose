@@ -39,6 +39,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:url"
           content="https://www.larosebeleza.com/proceeding"
         />
+        <meta
+          property="og:image"
+          content="/assets/procedimentos/preenchimento.jpeg"
+        />
         <meta property="og:site_name" content="Larosebeleza" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
