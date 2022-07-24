@@ -41,12 +41,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="/assets/procedimentos/preenchimento.jpeg"
+          content="/assets/procedimentos/opengraph.png"
         />
         <meta property="og:site_name" content="Larosebeleza" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Procedimentos | Larosebeleza" />
+        <meta
+          name="twitter:image"
+          content="/assets/procedimentos/opengraph.png"
+        />
         <meta
           name="description"
           content="A clinica La Rose oferece tratamentos rápidos ou terapêuticos, que objetivam a reabilitação ou melhora estética e da saúde de seus clientes, através de aplicações de cosméticos e terapias diversas."
